@@ -22,15 +22,5 @@ export default defineConfig({
       esmExternals: ["react"],
     },
   },
-  plugins: [
-    dts({
-      tsconfigPath: "./tsconfig.app.json",
-      outDir: "./dist",
-      entryRoot: "./src",
-      exclude: ["src/vite-env.d.ts"],
-      compilerOptions: {
-        baseUrl: "./src",
-      },
-    }),
-  ],
+  plugins: [dts({ tsconfigPath: "./tsconfig.app.json" })],
 });

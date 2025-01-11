@@ -43,6 +43,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dist": "link:dist",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.14"
