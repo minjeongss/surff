@@ -1,13 +1,13 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import path from "path";
+import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/components/index.tsx"),
-      name: "index",
+      name: "surff",
       fileName: "index",
     },
     rollupOptions: {
@@ -22,5 +22,15 @@ export default defineConfig({
       esmExternals: ["react"],
     },
   },
-  plugins: [react()],
+  plugins: [
+    dts({
+      tsconfigPath: "./tsconfig.app.json",
+      outDir: "./dist",
+      entryRoot: "./src",
+      exclude: ["src/vite-env.d.ts"],
+      compilerOptions: {
+        baseUrl: "./src",
+      },
+    }),
+  ],
 });
