@@ -43,10 +43,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "dist": "link:dist",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "styled-components": "^6.1.14"
+    "dist": "link:dist"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "styled-components": ">=5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

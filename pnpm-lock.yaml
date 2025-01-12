@@ -12,13 +12,13 @@ importers:
         specifier: link:dist
         version: link:dist
       react:
-        specifier: ^18.3.1
+        specifier: '>=16.8.0'
         version: 18.3.1
       react-dom:
-        specifier: ^18.3.1
+        specifier: '>=16.8.0'
         version: 18.3.1(react@18.3.1)
       styled-components:
-        specifier: ^6.1.14
+        specifier: '>=5.0.0'
         version: 6.1.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@eslint/js':
