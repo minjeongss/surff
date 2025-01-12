@@ -17,6 +17,15 @@ npm add surff styled-components
 
 ### Skeleton UI
 
+#### Props
+
+| Attribute |  Type  | Default |    Description    |
+| :-------: | :----: | :-----: | :---------------: |
+|   width   | number |   60    | Set up the width  |
+|  height   | number |   60    | Set up the height |
+
+#### Example
+
 ```tsx
 import { Skeleton } from "surff";
 
@@ -30,8 +39,3 @@ function App() {
 
 export default App;
 ```
-
-| Attribute |  Type  | Default |    Description    |
-| :-------: | :----: | :-----: | :---------------: |
-|   width   | number |   60    | Set up the width  |
-|  height   | number |   60    | Set up the height |
