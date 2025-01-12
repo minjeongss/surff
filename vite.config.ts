@@ -11,15 +11,17 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "react-dom", "styled-components"],
       output: {
         globals: {
           react: "React",
+          "react-dom": "ReactDOM",
+          "styled-components": "styled",
         },
       },
     },
     commonjsOptions: {
-      esmExternals: ["react"],
+      esmExternals: ["react", "react-dom", "styled-components"],
     },
   },
   plugins: [dts({ tsconfigPath: "./tsconfig.app.json" })],
