@@ -1,3 +1,4 @@
+import { SkeletonProps } from "./Skeleton.d";
 import styled, { keyframes } from "styled-components";
 
 const loading = keyframes`
@@ -10,7 +11,7 @@ const loading = keyframes`
   }
 `;
 
-export const SkeletonWrapper = styled.div<{ width: number; height: number }>`
+export const SkeletonWrapper = styled.div<SkeletonProps>`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
   border-radius: 4px;

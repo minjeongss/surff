@@ -1,6 +1,6 @@
 <div align="center">
-    <h1><strong>Surff 🏄</strong></h1>
-    <div>It's a Simple React UI library. Let's surff! 🌊</div>
+    <h1><strong>Surff Design System🏄</strong></h1>
+    <div>It's a Simple React UI Design System. Let's surff! 🌊</div>
 </div>
 
 ## Installation
