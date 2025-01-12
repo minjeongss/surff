@@ -3,7 +3,7 @@
     <div>It's a Simple React UI library. Let's surff! 🌊</div>
 </div>
 
-## Install
+## Installation
 
 To use Surff, Install the `surff` package and its `peer dependencies`(styled-components).
 
@@ -13,7 +13,7 @@ yarn add surff styled-components
 npm add surff styled-components
 ```
 
-## How to use
+## Usage
 
 ### Skeleton UI
 
@@ -21,8 +21,17 @@ npm add surff styled-components
 import { Skeleton } from "surff";
 
 function App() {
-  return <Skeleton width={60} height={60} />;
+  return (
+    <>
+      <Skeleton />
+    </>
+  );
 }
 
 export default App;
 ```
+
+| Attribute |  Type  | Default |    Description    |
+| :-------: | :----: | :-----: | :---------------: |
+|   width   | number |   60    | Set up the width  |
+|  height   | number |   60    | Set up the height |
