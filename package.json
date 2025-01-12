@@ -44,18 +44,16 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "styled-components": "^6.1.14",
-    "dist": "link:dist"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "styled-components": ">=5.0.0"
   },
   "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.14",
     "@chromatic-com/storybook": "3.2.3",
     "@eslint/js": "^9.17.0",
     "@storybook/addon-essentials": "8.4.7",
