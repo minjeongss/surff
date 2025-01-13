@@ -1,4 +1,4 @@
 import { createRoot } from "react-dom/client";
-import { Skeleton } from "./index.tsx";
+import { Modal } from "./index.tsx";
 
-createRoot(document.getElementById("root")!).render(<Skeleton />);
+createRoot(document.getElementById("root")!).render(<Modal />);
