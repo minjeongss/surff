@@ -6,12 +6,12 @@ const createElement = (selectedId: domNodeId) => {
   return element;
 };
 
-const usePortal = (domNodeId: domNodeId) => {
+const usePortal = (selectedId: domNodeId) => {
   const parentElement = document.body;
-  const existElement = document.getElementById(domNodeId);
-  const element = existElement ? existElement : createElement(domNodeId);
+  const isExistElement = document.getElementById(selectedId);
+  const element = isExistElement ? isExistElement : createElement(selectedId);
 
-  if (!existElement) {
+  if (!isExistElement) {
     parentElement.appendChild(element);
   }
   return element;

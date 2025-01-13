@@ -3,7 +3,7 @@ import usePortal from "../../hooks/usePortal";
 
 const Modal = () => {
   const element = usePortal("modal");
-  return createPortal(<div>Modal</div>, document.body);
+  return createPortal(<div>I'm a modal!</div>, element);
 };
 
 export default Modal;
