@@ -1,12 +1,12 @@
-type domNodeId = string;
+type DomNodeId = string;
 
-const createElement = (selectedId: domNodeId) => {
+const createElement = (selectedId: DomNodeId) => {
   const element = document.createElement("div");
   element.setAttribute("id", selectedId);
   return element;
 };
 
-const usePortal = (selectedId: domNodeId) => {
+const usePortal = (selectedId: DomNodeId) => {
   const parentElement = document.body;
   const isExistElement = document.getElementById(selectedId);
   const element = isExistElement ? isExistElement : createElement(selectedId);
