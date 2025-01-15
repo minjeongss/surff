@@ -18,7 +18,7 @@ yarn add surff styled-components
 npm add surff styled-components
 ```
 
-## Usage
+## Usage: Component
 
 ### Skeleton UI
 
@@ -43,4 +43,17 @@ function App() {
 }
 
 export default App;
+```
+
+## Usage: Custom Hook
+
+### usePortal
+
+```tsx
+const Component = () => {
+  const element = usePortal("portal");
+  if (!element) return null;
+
+  return createPortal(<div>Awesome Portal</div>, element);
+};
 ```
