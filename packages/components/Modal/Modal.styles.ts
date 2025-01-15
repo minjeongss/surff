@@ -8,3 +8,11 @@ export const ModalWrapper = styled.div`
   padding: 1rem;
   border: 2px solid black;
 `;
+
+export const ModalHeader = styled.div``;
+
+export const ModalBody = styled.div``;
+
+export const ModalFooter = styled.div``;
+
+export const CloseButton = styled.button``;

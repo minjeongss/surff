@@ -23,5 +23,5 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["packages"],
-  "exclude": ["packages/stories", "packages/main.tsx"]
+  "exclude": ["packages/stories", "packages/main.tsx", "packages/App.tsx"]
 }
