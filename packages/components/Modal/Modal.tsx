@@ -18,9 +18,9 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   useOnClickOutside(ref, onClose);
 
   // animation 관련 로직
-  const [closed, setClosed] = useState(false);
+  const [closed, setClosed] = useState(true);
   useEffect(() => {
-    let timeoutId = null;
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
     if (isOpen) setClosed(false);
     else {
       timeoutId = setTimeout(() => {
