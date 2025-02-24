@@ -3,11 +3,11 @@ import Modal from "./components/Modal/Modal";
 import useDisclosure from "./hooks/useDisclosure";
 
 const App = () => {
-  const { isOpen, onOpen, onToggle } = useDisclosure(false);
+  const { isOpen, onOpen, onClose } = useDisclosure(false);
   return (
     <div>
       <button onClick={onOpen}>open</button>
-      <Modal isOpen={isOpen} onToggle={onToggle} />
+      <Modal isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };

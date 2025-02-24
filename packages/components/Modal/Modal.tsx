@@ -8,26 +8,43 @@ import {
   ModalWrapper,
 } from "./Modal.styles";
 import { ModalProps } from "./Modal.d";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
-const Modal = ({ children, isOpen, onToggle }: ModalProps) => {
+const Modal = ({ children, isOpen, onClose }: ModalProps) => {
+  // portal 관련 로직
   const element = usePortal("modal");
   const ref = useRef(null);
-  useOnClickOutside(ref, onToggle);
+  useOnClickOutside(ref, onClose);
+
+  // animation 관련 로직
+  const [closed, setClosed] = useState(false);
+  useEffect(() => {
+    let timeoutId = null;
+    if (isOpen) setClosed(false);
+    else {
+      timeoutId = setTimeout(() => {
+        setClosed(true);
+      }, 400);
+    }
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [isOpen]);
 
   if (!element) return null;
+  if (!isOpen && closed) return null;
 
   return createPortal(
-    isOpen ? (
-      <ModalWrapper ref={ref}>
-        <ModalHeader>
-          <CloseButton onClick={onToggle}>X</CloseButton>
-        </ModalHeader>
-        <ModalBody>{children}</ModalBody>
-        <ModalFooter></ModalFooter>
-      </ModalWrapper>
-    ) : null,
+    <ModalWrapper ref={ref} $isOpen={isOpen}>
+      <ModalHeader>
+        <CloseButton onClick={onClose}>X</CloseButton>
+      </ModalHeader>
+      <ModalBody>{children}</ModalBody>
+      <ModalFooter></ModalFooter>
+    </ModalWrapper>,
     element
   );
 };
