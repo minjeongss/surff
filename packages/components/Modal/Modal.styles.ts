@@ -1,22 +1,5 @@
-import styled, { keyframes } from "styled-components";
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
-
-const fadeOut = keyframes`
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-`;
+import styled from "styled-components";
+import { fadeIn, fadeOut } from "../../lib/animation";
 
 export const ModalWrapper = styled.div<{ $isOpen: boolean }>`
   position: fixed;
