@@ -19,7 +19,7 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   useOnClickOutside(ref, onClose);
 
   // animation 관련 로직
-  const fadeOut = useFadeOutMotion(isOpen);
+  const fadeOut = useFadeOutMotion({ isOpen, executionTimeout: 400 });
 
   if (!element) return null;
   if (!isOpen && fadeOut) return null;
