@@ -1,5 +1,5 @@
 <div align="center">
-    <h1><strong>Surff Design System🏄</strong></h1>
+    <h1><strong>Surff</strong></h1>
     <div>It's a Simple React UI Design System. Let's surff! 🌊</div>
 </div>
 
@@ -18,42 +18,6 @@ yarn add surff styled-components
 npm add surff styled-components
 ```
 
-## Usage: Component
+## Usage
 
-### Skeleton UI
-
-#### Props
-
-| Attribute |  Type  | Default |    Description    |
-| :-------: | :----: | :-----: | :---------------: |
-|   width   | number |   60    | Set up the width  |
-|  height   | number |   60    | Set up the height |
-
-#### Example
-
-```tsx
-import { Skeleton } from "surff";
-
-function App() {
-  return (
-    <>
-      <Skeleton />
-    </>
-  );
-}
-
-export default App;
-```
-
-## Usage: Custom Hook
-
-### usePortal
-
-```tsx
-const Component = () => {
-  const element = usePortal("portal");
-  if (!element) return null;
-
-  return createPortal(<div>Awesome Portal</div>, element);
-};
-```
+- [docs](https://github.com/minjeongss/surff/tree/main/examples)
