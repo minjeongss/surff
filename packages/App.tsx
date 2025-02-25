@@ -7,7 +7,13 @@ const App = () => {
   return (
     <div>
       <button onClick={onOpen}>open</button>
-      <Modal isOpen={isOpen} onClose={onClose} />
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        position="bottom"
+        header="Modal Header Part"
+        body="Modal Body Part"
+      />
     </div>
   );
 };

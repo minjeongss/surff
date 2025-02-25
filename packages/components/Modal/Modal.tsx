@@ -3,7 +3,6 @@ import usePortal from "../../hooks/usePortal";
 import {
   CloseButton,
   ModalBody,
-  ModalFooter,
   ModalHeader,
   ModalWrapper,
 } from "./Modal.styles";
@@ -12,7 +11,13 @@ import { useRef } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 import useFadeOutMotion from "../../hooks/useFadeOutMotion";
 
-const Modal = ({ children, isOpen, onClose }: ModalProps) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  header,
+  body,
+  position = "center",
+}: ModalProps) => {
   // portal 관련 로직
   const element = usePortal("modal");
   const ref = useRef(null);
@@ -25,12 +30,12 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   if (!isOpen && fadeOut) return null;
 
   return createPortal(
-    <ModalWrapper ref={ref} $isOpen={isOpen}>
+    <ModalWrapper ref={ref} $isOpen={isOpen} $position={position}>
       <ModalHeader>
-        <CloseButton onClick={onClose}>X</CloseButton>
+        <div>{header}</div>
+        <CloseButton onClick={onClose} />
       </ModalHeader>
-      <ModalBody>{children}</ModalBody>
-      <ModalFooter></ModalFooter>
+      <ModalBody>{body}</ModalBody>
     </ModalWrapper>,
     element
   );

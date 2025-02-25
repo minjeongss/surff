@@ -1,5 +1,11 @@
+import { ReactNode } from "react";
+
+export type PositionType = "center" | "bottom" | "top";
+
 export interface ModalProps {
-  children?: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
+  position?: PositionType;
+  header: ReactNode;
+  body: ReactNode;
 }
