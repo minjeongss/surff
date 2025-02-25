@@ -8,8 +8,9 @@ import {
   ModalWrapper,
 } from "./Modal.styles";
 import { ModalProps } from "./Modal.d";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
+import useFadeOutMotion from "../../hooks/useFadeOutMotion";
 
 const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   // portal 관련 로직
@@ -18,24 +19,10 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   useOnClickOutside(ref, onClose);
 
   // animation 관련 로직
-  const [closed, setClosed] = useState(true);
-  useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout> | null = null;
-    if (isOpen) setClosed(false);
-    else {
-      timeoutId = setTimeout(() => {
-        setClosed(true);
-      }, 400);
-    }
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, [isOpen]);
+  const fadeOut = useFadeOutMotion(isOpen);
 
   if (!element) return null;
-  if (!isOpen && closed) return null;
+  if (!isOpen && fadeOut) return null;
 
   return createPortal(
     <ModalWrapper ref={ref} $isOpen={isOpen}>
