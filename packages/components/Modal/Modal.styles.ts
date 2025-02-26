@@ -38,7 +38,8 @@ export const CloseButton = styled.img.attrs({
   height: 15px;
 
   &:hover {
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
     cursor: pointer;
   }
 `;

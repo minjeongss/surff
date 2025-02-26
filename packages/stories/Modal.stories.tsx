@@ -70,6 +70,25 @@ const Template = (args: ModalProps) => {
   );
 };
 
+const TemplateOpen = (args: ModalProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure(true);
+  return (
+    <>
+      <button onClick={onOpen}>OPEN 🐋</button>
+      <Modal
+        {...args}
+        isOpen={isOpen}
+        onClose={onClose}
+        position={args.position}
+      />
+    </>
+  );
+};
+
 export const Default: Story = {
   render: Template,
+};
+
+export const DefaultOpen: Story = {
+  render: TemplateOpen,
 };
