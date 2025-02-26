@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export type PositionType = "center" | "bottom" | "top";
+export type PositionType = "top" | "center" | "bottom";
 
 export interface ModalProps {
   isOpen: boolean;

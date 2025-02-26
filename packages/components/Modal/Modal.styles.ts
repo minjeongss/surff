@@ -16,6 +16,7 @@ export const ModalWrapper = styled.div<{
   width: 50%;
   padding: 1rem;
   border-radius: 8px;
+  background: white;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
   animation: ${({ $isOpen }) => ($isOpen ? fadeIn : fadeOut)} 0.4s forwards
     ease-in-out;
