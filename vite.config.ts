@@ -6,7 +6,12 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "packages/index.tsx"),
+      entry: path.resolve(
+        __dirname,
+        "packages/index.tsx",
+        "packages/lib/components.ts",
+        "packages/lib/hooks.ts"
+      ),
       name: "surff",
       fileName: "index",
     },

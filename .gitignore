@@ -25,3 +25,7 @@ dist-ssr
 
 *storybook.log
 storybook-static
+
+# Personal Test
+packages/App.tsx
+packages/main.tsx
