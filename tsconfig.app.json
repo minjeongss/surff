@@ -22,6 +22,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["packages"],
+  "include": ["packages", "examples/components/Signup.tsx"],
   "exclude": ["packages/stories", "packages/main.tsx", "packages/App.tsx"]
 }
