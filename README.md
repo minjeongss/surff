@@ -1,12 +1,11 @@
+<h1 align="center">Surff UI</h1>
+
 <div align="center">
-    <h1><strong>Surff</strong></h1>
-    <div>It's a Simple React UI Design System. Let's surff! 🌊</div>
+
+[![NPM Badge](https://img.shields.io/badge/Downloads!-black?style=social&logo=npm&logoColor=red&link=https://www.npmjs.com/package/surff&label=NPM)](https://www.npmjs.com/package/surff)
+[![Storybook Badge](https://img.shields.io/badge/Examples!-black?style=social&logo=storybook&logoColor=FF4785&link=https://minjeongss.github.io/surff&label=Storybook%20|%20스토리북)](https://minjeongss.github.io/surff)
+
 </div>
-
-## Link
-
-- [NPM](https://www.npmjs.com/package/surff)
-- [Storybook](https://minjeongss.github.io/surff)
 
 ## Installation
 
