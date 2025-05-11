@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import path from "path";
 import dts from "vite-plugin-dts";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -24,5 +25,5 @@ export default defineConfig({
       esmExternals: ["react", "react-dom", "styled-components"],
     },
   },
-  plugins: [dts({ tsconfigPath: "./tsconfig.app.json" })],
+  plugins: [tailwindcss(), dts({ tsconfigPath: "./tsconfig.app.json" })],
 });
