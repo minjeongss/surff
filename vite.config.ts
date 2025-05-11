@@ -12,17 +12,16 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["react", "react-dom", "styled-components"],
+      external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          "styled-components": "styled",
         },
       },
     },
     commonjsOptions: {
-      esmExternals: ["react", "react-dom", "styled-components"],
+      esmExternals: ["react", "react-dom"],
     },
   },
   plugins: [tailwindcss(), dts({ tsconfigPath: "./tsconfig.app.json" })],
