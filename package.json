@@ -46,7 +46,8 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "tailwindcss": ">=4.1.6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.3",
