@@ -1,11 +1,5 @@
 import { createPortal } from "react-dom";
 import usePortal from "../../hooks/usePortal";
-import {
-  CloseButton,
-  ModalBody,
-  ModalHeader,
-  ModalWrapper,
-} from "./Modal.styles";
 import { ModalProps } from "./Modal.d";
 import { useRef } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
@@ -39,14 +33,36 @@ const Modal = ({
   if (!element) return null;
   if (!isOpen && fadeOut) return null;
 
+  const positionClasses = {
+    bottom: "fixed bottom-0 left-1/2 transform -translate-x-1/2",
+    center:
+      "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+    top: "fixed top-0 left-1/2 transform -translate-x-1/2",
+  };
+
   return createPortal(
-    <ModalWrapper ref={ref} $isOpen={isOpen} $position={position}>
-      <ModalHeader>
+    <div
+      ref={ref}
+      className={`
+      ${positionClasses[position]} 
+      w-1/2 p-4 rounded-lg bg-white shadow-md
+      ${isOpen ? "animate-fadeIn" : "animate-fadeOut"}`}
+    >
+      <div className="flex flex-row justify-between items-center mb-2">
         <div>{header}</div>
-        <CloseButton onClick={onClose} />
-      </ModalHeader>
-      <ModalBody>{body}</ModalBody>
-    </ModalWrapper>,
+        <div
+          onClick={onClose}
+          className="hover:bg-gray-100 hover:rounded-full cursor-pointer flex items-center justify-center"
+        >
+          <img
+            src="/packages/assets/x.png"
+            alt="x icon"
+            className="w-[15px] h-[15px]"
+          />
+        </div>
+      </div>
+      <div>{body}</div>
+    </div>,
     element
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
-import Modal from "./components/Modal/Modal";
-import useDisclosure from "./hooks/useDisclosure";
-import SignUp from "../examples/components/Signup";
+import Modal from "../../packages/components/Modal/Modal";
+import useDisclosure from "../../packages/hooks/useDisclosure";
 
 const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure(false);
@@ -13,7 +12,7 @@ const App = () => {
         onClose={onClose}
         position="center"
         header="회원가입"
-        body={<SignUp />}
+        body={"signup!"}
       />
     </div>
   );
